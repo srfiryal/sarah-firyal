@@ -97,7 +97,7 @@
 
     <div class="wrapper">
       <!-- Hero Section -->
-      <div class="flex gap-6 h-screen pt-16">
+      <section class="flex gap-6 h-screen pt-16">
         <div class="flex-1 flex flex flex-col justify-center">
           <h1 class="text-6xl font-semibold leading-tight">
             Hi! I am<br /><span class="text-primary-gradient"
@@ -114,10 +114,10 @@
         <div class="flex-1 flex flex-col justify-center">
           <img src="./assets/images/img_hero.png" alt="hero" class="w-full" />
         </div>
-      </div>
+      </section>
 
       <!-- Services Section -->
-      <div class="text-center mt-16">
+      <section class="text-center mt-16">
         <h1 class="text-4xl font-semibold leading-tight">
           My Awesome <span class="text-primary-gradient">Services</span>
         </h1>
@@ -127,7 +127,9 @@
           can create something amazing.
         </p>
         <div class="flex gap-8 w-11/12 mx-auto">
-          <div class="flex-1 bg-white rounded-xl py-14 px-10 card-shadow">
+          <div
+            class="flex-1 bg-white rounded-xl py-14 px-10 card-shadow border border-gray-150"
+          >
             <img
               src="./assets/images/img_mobile.png"
               alt="mobile"
@@ -146,7 +148,9 @@
               <img src="./assets/images/ic_java.svg" alt="flutter" />
             </div>
           </div>
-          <div class="flex-1 bg-white rounded-xl py-14 px-10 card-shadow">
+          <div
+            class="flex-1 bg-white rounded-xl py-14 px-10 card-shadow border border-gray-150"
+          >
             <img
               src="./assets/images/img_web.png"
               alt="mobile"
@@ -165,7 +169,9 @@
               <img src="./assets/images/ic_laravel.svg" alt="flutter" />
             </div>
           </div>
-          <div class="flex-1 bg-white rounded-xl py-14 px-10 card-shadow">
+          <div
+            class="flex-1 bg-white rounded-xl py-14 px-10 card-shadow border border-gray-150"
+          >
             <img
               src="./assets/images/img_design.png"
               alt="mobile"
@@ -192,7 +198,20 @@
         <button type="button" class="btn-filled-accent mt-12">
           See My Résumé
         </button>
-      </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section>
+        <div class="mt-16">
+          <h1 class="text-4xl font-semibold leading-tight text-center">
+            Recent <span class="text-primary-gradient">Projects</span>
+          </h1>
+          <div
+            class="grid grid-flow-row grid-cols-3 auto-rows-max gap-6 portfolio-container mt-10"
+          ></div>
+        </div>
+      </section>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
