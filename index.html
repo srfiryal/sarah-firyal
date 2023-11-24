@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sarah Firyal</title>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <script defer src="./assets/scripts/script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary500: "#FAC720",
+              primary700: "#FB9030",
+              accent500: "#208BE1",
+              accent700: "#1B4AB7",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .wrapper {
+          position: relative !important;
+          margin: 0 auto !important;
+          width: 100% !important;
+          max-width: 1920px !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="text-3xl">Hello world!</h1>
+  </body>
+</html>
