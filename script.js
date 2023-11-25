@@ -1,16 +1,44 @@
-const dummyData = {
-  title: "Project Title",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  image:
-    "https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?cs=srgb&dl=pexels-bri-schneiter-346529.jpg&fm=jpg",
-  url: "https://www.google.com/",
-};
-const portfolioData = [dummyData, dummyData, dummyData, dummyData, dummyData];
+const portfolioData = [
+  {
+    title: "LARE Jatim",
+    job: "Development",
+    description:
+      "A child protection problem reporting app, with features such chat, forum, and emergency contacts.",
+    image: "./assets/images/img_lare.png",
+  },
+  {
+    title: "Invigo",
+    job: "Development",
+    description:
+      "With an easy to use pitching system, this website connects start up founders, investors, and law firms.",
+    image: "./assets/images/img_invigo.png",
+  },
+  {
+    title: "DuitKiddo",
+    job: "Development",
+    description:
+      "This is a banking app built to help parents teach their children about financial literacy.",
+    image: "./assets/images/img_duitkiddo.png",
+  },
+  {
+    title: "Kultura",
+    job: "Design & Development",
+    description:
+      "A website of an Indonesian cultural exhibition, it promotes traditional cultures for young generations.",
+    image: "./assets/images/img_kultura.png",
+  },
+  {
+    title: "Siberpedia",
+    job: "Design & Development",
+    description:
+      "An educational website that targets young netizens, which teaches all about cyber security and threats.",
+    image: "./assets/images/img_siberpedia.png",
+  },
+];
 
 createPortfolioItem = (data) => {
-  const newDiv = document.createElement("div");
-  newDiv.className = "basis-auto w-1/3 p-4 h-[18rem] w-full";
+  const container = document.createElement("div");
+  container.className = "basis-auto w-1/3 p-3 h-64";
 
   const portfolioItem = document.createElement("div");
   portfolioItem.className =
@@ -28,32 +56,37 @@ createPortfolioItem = (data) => {
     "absolute top-0 opacity-0 left-0 px-8 h-full w-full flex flex-col transition-opacity duration-300 justify-center";
   portfolioItem.appendChild(content);
 
+  const job = document.createElement("div");
+  job.className = "text-xs text-white opacity-90 font-light";
+  job.textContent = data.job;
+  content.appendChild(job);
+
   const title = document.createElement("div");
-  title.className = "text-3xl text-white";
+  title.className = "text-xl mt-2 mb-2.5 font-semibold text-white";
   title.textContent = data.title;
   content.appendChild(title);
 
   const description = document.createElement("div");
-  description.className = "text-lg mt-2 text-white";
+  description.className = "text-white";
   description.textContent = data.description;
   content.appendChild(description);
 
   portfolioItem.addEventListener("mouseenter", () => {
     overlay.classList.remove("opacity-0");
-    overlay.classList.add("opacity-50");
+    overlay.classList.add("opacity-60");
     content.classList.remove("opacity-0");
     content.classList.add("opacity-100");
   });
 
   portfolioItem.addEventListener("mouseleave", () => {
     overlay.classList.add("opacity-0");
-    overlay.classList.remove("opacity-50");
+    overlay.classList.remove("opacity-60");
     content.classList.add("opacity-0");
     content.classList.remove("opacity-100");
   });
 
-  newDiv.appendChild(portfolioItem);
-  return newDiv;
+  container.appendChild(portfolioItem);
+  return container;
 };
 
 const portfolioContainer = document.querySelector(".portfolio-container");
