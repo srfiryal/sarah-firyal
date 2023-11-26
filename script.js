@@ -44,7 +44,7 @@ createPortfolioItem = (data) => {
   portfolioItem.className =
     "h-full w-full bg-[url('" +
     data.image +
-    "')] bg-cover cursor-pointer rounded-3xl relative project-background";
+    "')] bg-cover cursor-default rounded-3xl relative project-background";
 
   const overlay = document.createElement("div");
   overlay.className =

@@ -13,7 +13,7 @@
           extend: {
             colors: {
               primary500: "#FAC720",
-              primary600: "FCB015",
+              primary600: "#FCB015",
               primary700: "#FB9030",
               accent500: "#208BE1",
               accent700: "#1B4AB7",
@@ -25,15 +25,13 @@
   </head>
   <body>
     <!-- Navbar Section -->
-    <nav class="bg-white fixed w-full z-20 top-0 start-0">
+    <nav class="bg-white fixed w-full z-20 top-0 start-0 shadow-sm">
       <div
         id="navbar"
         class="wrapper max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4"
       >
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <span class="self-center text-xl font-semibold whitespace-nowrap"
-            >Sarah Firyal</span
-          >
+          <h3 class="text-xl font-semibold">Sarah Firyal</h3>
         </a>
         <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <button type="button" class="btn-filled-accent">Contact</button>
@@ -72,7 +70,7 @@
             <li>
               <a
                 href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary700 md:p-0 transition-colors"
                 aria-current="page"
                 >Home</a
               >
@@ -80,15 +78,22 @@
             <li>
               <a
                 href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
-                >About</a
+                class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary700 md:p-0 transition-colors"
+                >Services</a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
-                >Services</a
+                class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary700 md:p-0 transition-colors"
+                >Clients</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary700 md:p-0 transition-colors"
+                >Projects</a
               >
             </li>
           </ul>
@@ -235,6 +240,39 @@
         </div>
       </section>
     </div>
+
+    <!-- Footer Section -->
+    <footer class="card-shadow bg-white mt-24">
+      <div class="wrapper py-6 flex justify-between">
+        <h3 class="text-lg font-semibold">Sarah Firyal</h3>
+        <div class="flex font-medium gap-8">
+          <a
+            href="#"
+            class="text-gray-700 rounded hover:text-primary700 transition-colors"
+            aria-current="page"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="text-gray-700 rounded hover:text-primary700 transition-colors"
+            aria-current="page"
+            >Services</a
+          >
+          <a
+            href="#"
+            class="text-gray-700 rounded hover:text-primary700 transition-colors"
+            aria-current="page"
+            >Clients</a
+          >
+          <a
+            href="#"
+            class="text-gray-700 rounded hover:text-primary700 transition-colors"
+            aria-current="page"
+            >Projects</a
+          >
+        </div>
+      </div>
+    </footer>
     <script src="./script.js"></script>
   </body>
 </html>
