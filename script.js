@@ -40,12 +40,15 @@ createPortfolioItem = (data, index) => {
   const container = document.createElement("div");
   container.className = "basis-auto md:w-1/2 lg:w-1/3 md:p-3 h-52 md:h-56";
 
+  const wrapper = document.createElement("div");
+  wrapper.className = "reveal h-full w-full project-item";
+  wrapper.style.transitionDelay = `${index * 200}ms`;
+
   const portfolioItem = document.createElement("div");
   portfolioItem.className =
     "h-full w-full bg-[url('" +
     data.image +
-    "')] bg-cover cursor-default rounded-3xl relative project-item reveal";
-  portfolioItem.style.transitionDelay = `${index * 200}ms`;
+    "')] bg-cover cursor-default rounded-3xl relative";
 
   const overlay = document.createElement("div");
   overlay.className =
@@ -86,7 +89,8 @@ createPortfolioItem = (data, index) => {
     content.classList.remove("opacity-100");
   });
 
-  container.appendChild(portfolioItem);
+  wrapper.appendChild(portfolioItem);
+  container.appendChild(wrapper);
   return container;
 };
 
@@ -110,4 +114,17 @@ const reveal = () => {
   }
 };
 window.addEventListener("scroll", reveal);
+
 reveal();
+
+const navigateTo = (id) => {
+  var element = document.getElementById(id);
+  var headerOffset = 120;
+  var elementPosition = element.getBoundingClientRect().top;
+  var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth",
+  });
+};

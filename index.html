@@ -55,6 +55,7 @@
         </a>
         <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <button
+            onclick="navigateTo('contact')"
             type="button"
             class="btn-filled-accent hidden lg:block md:block"
           >
@@ -94,35 +95,36 @@
           >
             <li>
               <a
-                href="#"
-                class="block py-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary700 md:p-0 transition-colors"
+                onclick="navigateTo('hero')"
+                class="cursor-pointer block py-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary700 md:p-0 transition-colors"
                 aria-current="page"
                 >Home</a
               >
             </li>
             <li>
               <a
-                href="#"
-                class="block py-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary700 md:p-0 transition-colors"
+                onclick="navigateTo('services')"
+                class="cursor-pointer block py-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary700 md:p-0 transition-colors"
                 >Services</a
               >
             </li>
             <li>
               <a
-                href="#"
-                class="block py-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary700 md:p-0 transition-colors"
+                onclick="navigateTo('clients')"
+                class="cursor-pointer block py-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary700 md:p-0 transition-colors"
                 >Clients</a
               >
             </li>
             <li>
               <a
-                href="#"
-                class="block py-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary700 md:p-0 transition-colors"
+                onclick="navigateTo('projects')"
+                class="cursor-pointer block py-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary700 md:p-0 transition-colors"
                 >Projects</a
               >
             </li>
             <li class="pt-3 pb-4 px-6 md:hidden block">
               <button
+                onclick="navigateTo('contact')"
                 type="button"
                 class="btn-filled-accent w-full mt-2"
                 style="width: 100% !important"
@@ -152,7 +154,13 @@
             Specializes in Flutter development, also skilled in web development
             and UI/UX design.
           </p>
-          <button type="button" class="btn-filled-accent">Hire Me</button>
+          <button
+            onclick="navigateTo('services')"
+            type="button"
+            class="btn-filled-accent"
+          >
+            Get to Know Me
+          </button>
         </div>
         <div class="flex-1 flex flex-col justify-start md:justify-center">
           <img
@@ -312,7 +320,10 @@
     </div>
 
     <!-- Contact Section -->
-    <div class="h-80 md:h-72 lg:h-64 w-full relative mt-16 lg:mt-20">
+    <section
+      id="contact"
+      class="h-80 md:h-72 lg:h-64 w-full relative mt-16 lg:mt-20"
+    >
       <div class="flex flex-col justify-end h-full">
         <div
           class="bg-accent700 h-1/2 w-full max-width absolute"
@@ -350,7 +361,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Footer Section -->
     <footer
