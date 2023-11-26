@@ -36,7 +36,7 @@ const portfolioData = [
   },
 ];
 
-createPortfolioItem = (data) => {
+createPortfolioItem = (data, index) => {
   const container = document.createElement("div");
   container.className = "basis-auto md:w-1/2 lg:w-1/3 md:p-3 h-52 md:h-56";
 
@@ -44,7 +44,8 @@ createPortfolioItem = (data) => {
   portfolioItem.className =
     "h-full w-full bg-[url('" +
     data.image +
-    "')] bg-cover cursor-default rounded-3xl relative project-background";
+    "')] bg-cover cursor-default rounded-3xl relative project-item reveal";
+  portfolioItem.style.transitionDelay = `${index * 200}ms`;
 
   const overlay = document.createElement("div");
   overlay.className =
@@ -90,7 +91,23 @@ createPortfolioItem = (data) => {
 };
 
 const portfolioContainer = document.querySelector(".portfolio-container");
-for (const data of portfolioData) {
-  const portfolioItem = createPortfolioItem(data);
+for (var i = 0; i < portfolioData.length; i++) {
+  const portfolioItem = createPortfolioItem(portfolioData[i], i);
   portfolioContainer.appendChild(portfolioItem);
 }
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const reveal = () => {
+  for (let i = 0; i < revealElements.length; i++) {
+    let windowheight = window.innerHeight;
+    let revealtop = revealElements[i].getBoundingClientRect().top;
+    let revealpoint = 0;
+
+    if (revealtop < windowheight - revealpoint) {
+      revealElements[i].classList.add("active");
+    }
+  }
+};
+window.addEventListener("scroll", reveal);
+reveal();

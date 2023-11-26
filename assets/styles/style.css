@@ -105,23 +105,66 @@ body {
   opacity: 0.65;
 }
 
+.reveal {
+  position: relative;
+  transform: translateX(-25px);
+  opacity: 0;
+  filter: blur(3px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+  filter: blur(0px);
+}
+
 #hero {
   max-height: 52rem;
 }
 
-.project-background {
+#services .service-card:nth-child(2) {
+  transition-delay: 200ms;
+}
+#services .service-card:nth-child(3) {
+  transition-delay: 400ms;
+}
+
+#projects .project-item {
   background-size: 100% !important;
   background-position: center;
   transition: all 0.3s ease-out;
 }
 
-.project-background:hover {
+#projects .project-item:hover {
   background-size: 110% !important;
   background-position: center;
+}
+
+#projects .project-item:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+#projects .project-item:nth-child(3) {
+  transition-delay: 400ms;
+}
+
+#projects .project-item:nth-child(4) {
+  transition-delay: 600ms;
+}
+
+#projects .project-item:nth-child(5) {
+  transition-delay: 800ms;
 }
 
 @media screen and (max-width: 768px) {
   .wrapper {
     width: 80% !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .reveal {
+    transition-delay: 0ms !important;
   }
 }
