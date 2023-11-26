@@ -107,3 +107,9 @@ body {
   background-size: 110% !important;
   background-position: center;
 }
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 80% !important;
+  }
+}

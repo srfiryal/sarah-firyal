@@ -38,7 +38,7 @@ const portfolioData = [
 
 createPortfolioItem = (data) => {
   const container = document.createElement("div");
-  container.className = "basis-auto w-1/3 p-3 h-64";
+  container.className = "basis-auto md:w-1/2 lg:w-1/3 md:p-3 h-52 md:h-56";
 
   const portfolioItem = document.createElement("div");
   portfolioItem.className =
