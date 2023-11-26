@@ -28,7 +28,7 @@
     <nav class="bg-white fixed w-full z-20 top-0 start-0 shadow-sm">
       <div
         id="navbar"
-        class="wrapper max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4"
+        class="wrapper flex flex-wrap items-center justify-between mx-auto py-4"
       >
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
           <h3 class="text-xl font-semibold">Sarah Firyal</h3>
@@ -118,7 +118,12 @@
           <button type="button" class="btn-filled-accent">Hire Me</button>
         </div>
         <div class="flex-1 flex flex-col justify-center">
-          <img src="./assets/images/img_hero.png" alt="hero" class="w-full" />
+          <img
+            src="./assets/images/img_hero.png"
+            alt="hero"
+            class="w-full object-contain"
+            style="max-height: 36rem"
+          />
         </div>
       </section>
 
@@ -207,8 +212,15 @@
       </section>
 
       <!-- Clients Section -->
-      <section id="clients" class="flex gap-6 mt-36">
-        <div class="flex-1 flex flex flex-col justify-center">
+      <section id="clients" class="flex gap-12 mt-40">
+        <div class="flex flex-col justify-center items-start w-2/5">
+          <img
+            src="./assets/images/img_clients.png"
+            alt="hero"
+            class="w-11/12"
+          />
+        </div>
+        <div class="flex-1 flex flex-col justify-center">
           <h1 class="text-4xl font-semibold leading-tight">
             Worked with These
             <span class="text-primary-gradient">Brands and Clients</span>
@@ -220,13 +232,10 @@
           </p>
           <button type="button" class="btn-filled-accent">See Details</button>
         </div>
-        <div class="flex-1 flex flex-col justify-center items-end">
-          <img src="./assets/images/img_clients.png" alt="hero" class="w-3/4" />
-        </div>
       </section>
 
       <!-- Projects Section -->
-      <section id="projects" class="mt-32">
+      <section id="projects" class="mt-40">
         <h1 class="text-4xl text-center font-semibold leading-tight">
           Recent <span class="text-primary-gradient">Projects</span>
         </h1>
@@ -241,7 +250,7 @@
       </section>
     </div>
 
-    <div class="h-64 w-full relative mt-16">
+    <div class="h-64 w-full relative mt-16 max-width">
       <div class="flex flex-col justify-end h-full">
         <div class="bg-accent700 h-1/2 w-full"></div>
       </div>
@@ -275,7 +284,7 @@
     </div>
 
     <!-- Footer Section -->
-    <footer class="bg-accent700 pt-12 pb-6 text-white">
+    <footer class="max-width bg-accent700 pt-12 pb-6 text-white">
       <div class="wrapper py-8 flex justify-between">
         <h3 class="text-lg font-semibold">Sarah Firyal</h3>
         <div class="flex font-medium gap-8">

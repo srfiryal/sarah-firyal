@@ -28,6 +28,12 @@ body {
   max-width: 1920px !important;
 }
 
+.max-width {
+  position: relative !important;
+  margin: 0 auto !important;
+  max-width: 1920px !important;
+}
+
 .btn-filled-accent {
   width: fit-content !important;
   font-size: 0.9rem !important;
@@ -85,6 +91,10 @@ body {
 
 .rounded-sm {
   border-radius: 24px;
+}
+
+#hero {
+  max-height: 52rem;
 }
 
 .project-background {
