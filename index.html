@@ -44,13 +44,22 @@
       >
         <a
           href="#"
-          class="flex gap-1 items-center space-x-3 rtl:space-x-reverse"
+          class="flex lg:gap-1 items-center space-x-3 rtl:space-x-reverse"
         >
-          <img src="./assets/images/img_logo.png" alt="logo" class="h-10" />
-          <h3 class="text-lg font-semibold">Sarah Firyal</h3>
+          <img
+            src="./assets/images/img_logo.png"
+            alt="logo"
+            class="w-9 lg:w-10"
+          />
+          <h3 class="lg:text-lg font-semibold">Sarah Firyal</h3>
         </a>
         <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <button type="button" class="btn-filled-accent hidden lg:block md:block">Contact</button>
+          <button
+            type="button"
+            class="btn-filled-accent hidden lg:block md:block"
+          >
+            Contact
+          </button>
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"
@@ -81,12 +90,12 @@
           id="navbar-sticky"
         >
           <ul
-            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"
+            class="flex flex-col divide-y md:divide-y-0 divide-gray-100 text-center font-medium border border-gray-100 rounded-lg bg-white md:space-x-6 lg:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"
           >
             <li>
               <a
                 href="#"
-                class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary700 md:p-0 transition-colors"
+                class="block py-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary700 md:p-0 transition-colors"
                 aria-current="page"
                 >Home</a
               >
@@ -94,30 +103,32 @@
             <li>
               <a
                 href="#"
-                class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary700 md:p-0 transition-colors"
+                class="block py-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary700 md:p-0 transition-colors"
                 >Services</a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary700 md:p-0 transition-colors"
+                class="block py-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary700 md:p-0 transition-colors"
                 >Clients</a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary700 md:p-0 transition-colors"
+                class="block py-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary700 md:p-0 transition-colors"
                 >Projects</a
               >
             </li>
-            <li>
-              <a
-                href="#"
-                class="lg:hidden md:hidden block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary700 md:p-0 transition-colors"
-                >Contact</a
+            <li class="pt-3 pb-4 px-6 md:hidden block">
+              <button
+                type="button"
+                class="btn-filled-accent w-full mt-2"
+                style="width: 100% !important"
               >
+                Contact
+              </button>
             </li>
           </ul>
         </div>

@@ -73,14 +73,14 @@ createPortfolioItem = (data) => {
 
   portfolioItem.addEventListener("mouseenter", () => {
     overlay.classList.remove("opacity-0");
-    overlay.classList.add("opacity-60");
+    overlay.classList.add("opacity-65");
     content.classList.remove("opacity-0");
     content.classList.add("opacity-100");
   });
 
   portfolioItem.addEventListener("mouseleave", () => {
     overlay.classList.add("opacity-0");
-    overlay.classList.remove("opacity-60");
+    overlay.classList.remove("opacity-65");
     content.classList.add("opacity-0");
     content.classList.remove("opacity-100");
   });
