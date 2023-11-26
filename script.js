@@ -17,7 +17,7 @@ const portfolioData = [
     title: "DuitKiddo",
     job: "Development",
     description:
-      "This is a banking app built to help parents teach their children about financial literacy.",
+      "A banking app built to help parents teach their children about financial literacy and responsibility.",
     image: "./assets/images/img_duitkiddo.png",
   },
   {
@@ -44,7 +44,7 @@ createPortfolioItem = (data) => {
   portfolioItem.className =
     "h-full w-full bg-[url('" +
     data.image +
-    "')] bg-cover cursor-pointer rounded-3xl relative";
+    "')] bg-cover cursor-pointer rounded-3xl relative project-background";
 
   const overlay = document.createElement("div");
   overlay.className =

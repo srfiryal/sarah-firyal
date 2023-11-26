@@ -86,3 +86,14 @@ body {
 .rounded-sm {
   border-radius: 24px;
 }
+
+.project-background {
+  background-size: 100% !important;
+  background-position: center;
+  transition: all 0.3s ease-out;
+}
+
+.project-background:hover {
+  background-size: 110% !important;
+  background-position: center;
+}
