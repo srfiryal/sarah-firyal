@@ -5,13 +5,15 @@ const portfolioData = [
     description:
       "A child protection problem reporting app, with features such chat, forum, and emergency contacts.",
     image: "./assets/images/img_lare.png",
+    url: "https://play.google.com/store/apps/details?id=com.fan.lare_jatim&pcampaignid=web_share"
   },
   {
-    title: "Invigo",
-    job: "Development",
+    title: "Eco.in",
+    job: "Design & Development",
     description:
-      "With an easy to use pitching system, this website connects start up founders, investors, and law firms.",
-    image: "./assets/images/img_invigo.png",
+      " An educational app that discusses environmental issues through games and virtual simulations.",
+    image: "./assets/images/img_ecoin.png",
+    url: "https://github.com/algavania/invigo"
   },
   {
     title: "DuitKiddo",
@@ -19,6 +21,7 @@ const portfolioData = [
     description:
       "A banking app built to help parents teach their children about financial literacy and responsibility.",
     image: "./assets/images/img_duitkiddo.png",
+    url: "https://github.com/algavania/switfies_technoscape"
   },
   {
     title: "Kultura",
@@ -26,6 +29,7 @@ const portfolioData = [
     description:
       "A website of an Indonesian cultural exhibition, it promotes traditional cultures for young generations.",
     image: "./assets/images/img_kultura.png",
+    url: "https://kultura-id.vercel.app/"
   },
   {
     title: "Siberpedia",
@@ -33,6 +37,7 @@ const portfolioData = [
     description:
       "An educational website that targets young netizens, which teaches all about cyber security and threats.",
     image: "./assets/images/img_siberpedia.png",
+    url: "https://siberpedia.vercel.app/"
   },
 ];
 
@@ -44,11 +49,16 @@ createPortfolioItem = (data, index) => {
   wrapper.className = "reveal h-full w-full project-item";
   wrapper.style.transitionDelay = `${index * 200}ms`;
 
+  const link = document.createElement("a");
+  link.href = data.url;
+  link.target = "_blank";
+  link.className = "cursor-pointer";
+
   const portfolioItem = document.createElement("div");
   portfolioItem.className =
     "h-full w-full bg-[url('" +
     data.image +
-    "')] bg-cover cursor-default rounded-3xl relative";
+    "')] bg-cover rounded-3xl relative";
 
   const overlay = document.createElement("div");
   overlay.className =
@@ -89,7 +99,8 @@ createPortfolioItem = (data, index) => {
     content.classList.remove("opacity-100");
   });
 
-  wrapper.appendChild(portfolioItem);
+  link.appendChild(portfolioItem);
+  wrapper.appendChild(link);
   container.appendChild(wrapper);
   return container;
 };
